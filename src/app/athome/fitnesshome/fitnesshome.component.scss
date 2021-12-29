@@ -1,0 +1,394 @@
+:host {
+  position: relative;
+  top: 20px;
+  display: block;
+  height: 550px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.box {
+
+
+
+  position: relative;
+border: 1px solid #BBB;
+  background: #EEE;
+
+}
+
+.ribbon {
+
+
+
+
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+
+}
+
+.ribbon span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  right: -21px;
+}
+
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+
+
+
+.mybox1 {
+  display: block;
+  width: 350px;
+  height: 300px;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+
+
+}
+
+.mybox2 {
+  display: block;
+  width: 350px;
+  height: 300px;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+
+}
+
+.mybox3 {
+  display: block;
+  width: 350px;
+  height: 300px;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #5614FA;
+  opacity: .4;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+
+
+
+
+}
+
+.box1 {
+  background: url('/assets/img/pilates4.jpg');
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s;
+  cursor: pointer;
+
+  transform: scale(1.2);
+}
+
+.overlay:hover {
+  opacity: .1;
+
+}
+
+.box1:hover {
+
+  transform: scale(1.4);
+}
+
+.box1:hover::after {
+  content: 'Pilates';
+  transition: all 4s;
+  transition-timing-function: ease-in;
+  position: absolute;
+  top: 13%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 1;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: scale(1.4);
+}
+
+.box2 {
+  background-image: url('/assets/img/pp.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.box2:hover {
+  transform: scale(1.4);
+}
+.box2:hover::after {
+  content: 'Body Weight workout';
+  transition: all 4s;
+  transition-timing-function: ease-in;
+  position: absolute;
+  top: 13%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 1;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: scale(1.4);
+}
+
+
+
+
+
+.box3 {
+  background-image: url('/assets/img/weights3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.box3:hover {
+  transform: scale(1.4);
+}
+.box3:hover::after {
+  content: 'weights exercises';
+  transition: all 4s;
+  transition-timing-function: ease-in;
+  position: absolute;
+  top: 13%;
+  left:33%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 1;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: scale(1.4);
+}
+
+
+
+
+@media screen and (max-width: 575px) {
+  :host {
+    position: relative;
+
+    display: block;
+    height: 850px;
+  }
+
+  .container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .mybox1 {
+
+    width: 250px;
+    height: 200px;
+
+
+
+  }
+
+  .mybox2 {
+
+    width: 250px;
+    height: 200px;
+
+
+
+  }
+
+  .mybox3 {
+
+    width: 250px;
+    height: 200px;
+  }
+
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+:host{
+
+  display:block;
+  height:500px;
+}
+  .container {
+    position: relative;
+
+    display: flex;
+
+
+
+  }
+
+  .mybox1 {
+
+    width: 300px;
+    height: 250px;
+
+
+
+  }
+
+  .mybox2 {
+
+    width: 300px;
+    height: 250px;
+
+
+
+  }
+
+  .mybox3 {
+
+    width: 300px;
+    height: 250px;
+  }
+
+
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+:host{
+  display:block;
+  height:500px;
+}
+  .container {
+    position: relative;
+
+    display: flex;
+
+
+
+  }
+
+  .mybox1 {
+
+    width: 300px;
+    height: 250px;
+
+
+
+  }
+
+  .mybox2 {
+
+    width: 300px;
+    height: 250px;
+
+
+
+  }
+
+  .mybox3 {
+
+    width: 300px;
+    height: 250px;
+  }
+
+
+
+
+
+
+}

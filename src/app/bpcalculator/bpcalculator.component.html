@@ -1,0 +1,30 @@
+<section >
+<div class=" mybox" >
+    <p class='txt'>BMI calculator</p>
+
+<div class="box">
+   <input type="number" placeholder= " Height : 180 cm" [(ngModel)]="height" required min="1">
+ <input type="number" placeholder=" Weight : 65 kg" [(ngModel)]="weight" required min="1">
+
+</div>
+
+<div class="box1">
+
+
+    <p class='total' [ngStyle]="{'backgroundColor':getColor()}">{{total|number:'1.0-1'}}</p>
+
+</div>
+<div class="alldata">
+<div class='box2 mybox2' [class.color1]='value1'>Underweight<div></div> < 18.5</div>
+<div class='box2' [class.color2]='value2'>Normal weight<div></div>18,5 - 25</div>
+<div class='box2' [class.color3]='value3'>Overweight<div></div>25 - 30</div>
+<div class='box2' [class.color4]='value4'>Obese<div></div>> 30</div>
+</div>
+<div class="btn-box">
+<button class='btn-btn'(click)="getData()">Calculate</button>
+<button class='btn-clear'(click)="getClear()">Clear</button>
+</div>
+</div>
+
+
+</section>
